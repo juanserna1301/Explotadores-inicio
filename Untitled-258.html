@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <title>Administrador Base de Datos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #0b9537;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0; /* Espaciado entre botones */
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #075326;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Administrador de procesos de Certificación de Explotadores UAS</h1>
+        <button id="agregar"></button>
+        <br><br>
+        <div>
+            <button id="OscarDanielRojas">OSCAR DANIEL ROJAS</button>
+            <button id="pabelHenao">PABEL HENAO</button>
+            <button id="DanielCantor">DANIEL CANTOR</button>
+            <button id="MonicaCardenas">MONICA CARDENAS</button>
+            <button id="DiegoHiguera">DIEGO HIGUERA</button>
+            <button id="AndresLopezBueno">ANDRES LOPEZ BUENO</button>
+            <button id="AndresfelipeSAlcedo">ANDRES FELIPE SALCEDO</button>
+            <button id="KatherineRincon">KATHERINE RINCON</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+
+        document.getElementById('agregar').addEventListener('click', function () {
+            const nombre = document.getElementById('nombre')?.value || '';
+            if (nombre) {
+                localStorage.setItem('nombre', nombre);
+                redirectTo('formulario.html'); // Redirige al formulario
+            } else {
+                alert('Por favor ingrese un nombre.');
+            }
+        });
+
+        document.getElementById('OscarDanielRojas').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-OSCAR%20DANIEL%20ROJAS.html');
+        });
+
+        document.getElementById('pabelHenao').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-PABEL%20HENAO.html');
+        });
+
+        document.getElementById('DanielCantor').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-Daniel%20Cantor.html');
+        });
+
+        document.getElementById('MonicaCardenas').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-Monica%20Cardenas.html');
+        });
+        document.getElementById('DiegoHiguera').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-Diego%20Higuera.html');
+        });
+        document.getElementById('AndresLopezBueno').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-%20Andres%20lopez%20Bueno.html');
+        });
+        document.getElementById('AndresfelipeSAlcedo').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-Andres%20Felipe%20Salcedo.html');
+        });
+        document.getElementById('KatherineRincon').addEventListener('click', function () {
+            redirectTo('file:///C:/Users/JUAN%20CAMILO%20SERNA/Untitled-Katherine%20Rincon.html');
+        });
+        // Agregar eventos para los otros botones según sea necesario
+    </script>
+</body>
+</html>
